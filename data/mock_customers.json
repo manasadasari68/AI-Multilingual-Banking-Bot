@@ -1,0 +1,258 @@
+[
+  {
+    "customer_id": "CUST1001",
+    "full_name": "Ravi Kumar",
+    "account_number": "451278903214",
+    "account_type": "Savings",
+    "branch": "Madhapur, Hyderabad",
+    "ifsc": "AIBB0001451",
+    "registered_mobile": "98XXXX2104",
+    "available_balance": 58240.75,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 450 to Fresh Mart on 2026-05-04",
+      "Salary credit of Rs. 68,000 on 2026-05-01",
+      "ATM cash withdrawal of Rs. 2,000 on 2026-04-29"
+    ]
+  },
+  {
+    "customer_id": "CUST1002",
+    "full_name": "Sowmya Reddy",
+    "account_number": "782145609331",
+    "account_type": "Current",
+    "branch": "Banjara Hills, Hyderabad",
+    "ifsc": "AIBB0002782",
+    "registered_mobile": "97XXXX4432",
+    "available_balance": 194320.10,
+    "currency": "INR",
+    "last_transactions": [
+      "NEFT credit of Rs. 25,000 on 2026-05-05",
+      "POS debit of Rs. 1,240 at City Pharmacy on 2026-05-03",
+      "IMPS transfer of Rs. 7,500 on 2026-05-02"
+    ]
+  },
+  {
+    "customer_id": "CUST1003",
+    "full_name": "Arjun Narayan",
+    "account_number": "663390214578",
+    "account_type": "Savings",
+    "branch": "T Nagar, Chennai",
+    "ifsc": "AIBB0003663",
+    "registered_mobile": "99XXXX8801",
+    "available_balance": 27650.00,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 320 to Metro Foods on 2026-05-05",
+      "Cash deposit of Rs. 5,000 on 2026-05-01",
+      "Electricity bill payment of Rs. 1,780 on 2026-04-30"
+    ]
+  },
+  {
+    "customer_id": "CUST1004",
+    "full_name": "Priya Sharma",
+    "account_number": "550812349901",
+    "account_type": "Savings",
+    "branch": "Connaught Place, New Delhi",
+    "ifsc": "AIBB0004550",
+    "registered_mobile": "96XXXX1208",
+    "available_balance": 84310.50,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 210 to Coffee Hub on 2026-05-05",
+      "Salary credit of Rs. 72,500 on 2026-05-01",
+      "Online shopping debit of Rs. 3,499 on 2026-04-28"
+    ]
+  },
+  {
+    "customer_id": "CUST1005",
+    "full_name": "Kiran Patel",
+    "account_number": "612340987654",
+    "account_type": "Current",
+    "branch": "Navrangpura, Ahmedabad",
+    "ifsc": "AIBB0005612",
+    "registered_mobile": "95XXXX5521",
+    "available_balance": 256780.90,
+    "currency": "INR",
+    "last_transactions": [
+      "RTGS credit of Rs. 80,000 on 2026-05-04",
+      "Vendor payment of Rs. 14,600 on 2026-05-03",
+      "IMPS transfer of Rs. 9,200 on 2026-05-01"
+    ]
+  },
+  {
+    "customer_id": "CUST1006",
+    "full_name": "Meena Iyer",
+    "account_number": "701245889632",
+    "account_type": "Savings",
+    "branch": "Adyar, Chennai",
+    "ifsc": "AIBB0006701",
+    "registered_mobile": "94XXXX7714",
+    "available_balance": 32145.65,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 540 to Green Grocers on 2026-05-05",
+      "Dividend credit of Rs. 1,850 on 2026-05-02",
+      "Metro card recharge of Rs. 500 on 2026-04-30"
+    ]
+  },
+  {
+    "customer_id": "CUST1007",
+    "full_name": "Harish Babu",
+    "account_number": "845612309874",
+    "account_type": "Savings",
+    "branch": "Vijayawada Main, Vijayawada",
+    "ifsc": "AIBB0007845",
+    "registered_mobile": "93XXXX4459",
+    "available_balance": 11890.00,
+    "currency": "INR",
+    "last_transactions": [
+      "ATM withdrawal of Rs. 1,000 on 2026-05-04",
+      "UPI debit of Rs. 320 to Fuel Station on 2026-05-03",
+      "Cash deposit of Rs. 4,000 on 2026-05-01"
+    ]
+  },
+  {
+    "customer_id": "CUST1008",
+    "full_name": "Nandini Rao",
+    "account_number": "934561208745",
+    "account_type": "Savings",
+    "branch": "Whitefield, Bengaluru",
+    "ifsc": "AIBB0008934",
+    "registered_mobile": "92XXXX3017",
+    "available_balance": 67220.30,
+    "currency": "INR",
+    "last_transactions": [
+      "Salary credit of Rs. 88,000 on 2026-05-01",
+      "UPI debit of Rs. 1,120 to Cloud Kitchen on 2026-05-03",
+      "Movie ticket booking of Rs. 780 on 2026-05-02"
+    ]
+  },
+  {
+    "customer_id": "CUST1009",
+    "full_name": "Rahul Verma",
+    "account_number": "456701239845",
+    "account_type": "Current",
+    "branch": "Hazratganj, Lucknow",
+    "ifsc": "AIBB0009456",
+    "registered_mobile": "91XXXX8840",
+    "available_balance": 309455.75,
+    "currency": "INR",
+    "last_transactions": [
+      "Cheque clearing credit of Rs. 45,000 on 2026-05-05",
+      "Vendor transfer of Rs. 12,300 on 2026-05-02",
+      "POS debit of Rs. 2,150 at Tech World on 2026-05-01"
+    ]
+  },
+  {
+    "customer_id": "CUST1010",
+    "full_name": "Lakshmi Devi",
+    "account_number": "529876341205",
+    "account_type": "Savings",
+    "branch": "Warangal Urban, Warangal",
+    "ifsc": "AIBB0010529",
+    "registered_mobile": "90XXXX6722",
+    "available_balance": 45120.80,
+    "currency": "INR",
+    "last_transactions": [
+      "Pension credit of Rs. 22,000 on 2026-05-01",
+      "UPI debit of Rs. 260 to Medical Store on 2026-05-04",
+      "Electricity bill payment of Rs. 1,420 on 2026-05-03"
+    ]
+  },
+  {
+    "customer_id": "CUST1011",
+    "full_name": "Vikram Singh",
+    "account_number": "678902145367",
+    "account_type": "Savings",
+    "branch": "Malviya Nagar, Jaipur",
+    "ifsc": "AIBB0011678",
+    "registered_mobile": "89XXXX1186",
+    "available_balance": 22875.40,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 150 to Tea Point on 2026-05-05",
+      "Cash deposit of Rs. 3,500 on 2026-05-02",
+      "Fastag recharge of Rs. 700 on 2026-04-30"
+    ]
+  },
+  {
+    "customer_id": "CUST1012",
+    "full_name": "Anjali Menon",
+    "account_number": "790145623489",
+    "account_type": "Savings",
+    "branch": "Kakkanad, Kochi",
+    "ifsc": "AIBB0012790",
+    "registered_mobile": "88XXXX6044",
+    "available_balance": 90560.25,
+    "currency": "INR",
+    "last_transactions": [
+      "Salary credit of Rs. 95,000 on 2026-05-01",
+      "UPI debit of Rs. 980 to Grocery Basket on 2026-05-04",
+      "Flight booking debit of Rs. 8,450 on 2026-05-02"
+    ]
+  },
+  {
+    "customer_id": "CUST1013",
+    "full_name": "Suresh Naik",
+    "account_number": "812367450921",
+    "account_type": "Current",
+    "branch": "Panjim Central, Goa",
+    "ifsc": "AIBB0013812",
+    "registered_mobile": "87XXXX9903",
+    "available_balance": 141780.00,
+    "currency": "INR",
+    "last_transactions": [
+      "NEFT credit of Rs. 18,000 on 2026-05-05",
+      "Restaurant payment of Rs. 2,860 on 2026-05-03",
+      "Online ad payment of Rs. 6,200 on 2026-05-02"
+    ]
+  },
+  {
+    "customer_id": "CUST1014",
+    "full_name": "Divya Karthik",
+    "account_number": "923456781204",
+    "account_type": "Savings",
+    "branch": "Mysore Road, Bengaluru",
+    "ifsc": "AIBB0014923",
+    "registered_mobile": "86XXXX2261",
+    "available_balance": 38990.55,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 430 to Bakery Hub on 2026-05-05",
+      "Refund credit of Rs. 1,299 on 2026-05-03",
+      "Bus pass recharge of Rs. 1,200 on 2026-05-01"
+    ]
+  },
+  {
+    "customer_id": "CUST1015",
+    "full_name": "Manoj Kulkarni",
+    "account_number": "345612789043",
+    "account_type": "Current",
+    "branch": "Shivajinagar, Pune",
+    "ifsc": "AIBB0015345",
+    "registered_mobile": "85XXXX3478",
+    "available_balance": 212430.60,
+    "currency": "INR",
+    "last_transactions": [
+      "RTGS credit of Rs. 55,000 on 2026-05-05",
+      "POS debit of Rs. 1,980 at Office Supplies on 2026-05-04",
+      "UPI debit of Rs. 760 to Cafe Circle on 2026-05-02"
+    ]
+  },
+  {
+    "customer_id": "CUST1016",
+    "full_name": "Keerthi Rani",
+    "account_number": "458901236754",
+    "account_type": "Savings",
+    "branch": "Dilsukhnagar, Hyderabad",
+    "ifsc": "AIBB0016458",
+    "registered_mobile": "84XXXX7710",
+    "available_balance": 15460.15,
+    "currency": "INR",
+    "last_transactions": [
+      "UPI debit of Rs. 120 to Fruit Cart on 2026-05-05",
+      "Cash deposit of Rs. 2,500 on 2026-05-03",
+      "Mobile recharge of Rs. 399 on 2026-05-01"
+    ]
+  }
+]
