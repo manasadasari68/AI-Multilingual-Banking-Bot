@@ -164,6 +164,13 @@ def _contains_pronoun_reference(text: str) -> bool:
 def _is_customer_intent_query(text: str) -> bool:
     lowered = text.lower()
     customer_terms = [
+        "customer name",
+        "full name",
+        "full_name",
+        "name on account",
+        "customer id",
+        "customer_id",
+        "cust",
         "balance",
         "account number",
         "acct number",
@@ -269,6 +276,8 @@ def _build_customer_response(query_en: str, customer: Dict[str, object], self_qu
     subject = _subject(customer, self_query)
     parts: List[str] = []
 
+    wants_customer_name = _contains_any(query_en, ["customer name", "full name", "full_name", "name on account"])
+    wants_customer_id = _contains_any(query_en, ["customer id", "customer_id", "cust id", "cust"])
     wants_balance = _contains_any(query_en, ["balance", "bank balance", "available balance"])
     wants_account_number = _contains_any(query_en, ["account number", "acct number"])
     wants_branch = _contains_any(query_en, ["branch", "home branch"])
@@ -283,11 +292,15 @@ def _build_customer_response(query_en: str, customer: Dict[str, object], self_qu
     if "last 2" in lowered_query or "recent 2" in lowered_query or "two transactions" in lowered_query:
         transaction_count = 2
 
+    if wants_customer_name:
+        parts.append(f"The customer name for {subject} account is {customer['full_name']}.")
     if wants_balance:
         parts.append(
             f"The available balance in {subject} account is "
             f"{_format_currency(customer['available_balance'], customer['currency'])}."
         )
+    if wants_customer_id:
+        parts.append(f"The customer ID for {subject} account is {customer['customer_id']}.")
     if wants_account_number:
         parts.append(
             f"The account number for {subject} account ends with "
@@ -309,7 +322,7 @@ def _build_customer_response(query_en: str, customer: Dict[str, object], self_qu
     if wants_details:
         parts.append(
             f"Here are the account details for {subject} account: "
-            f"account type {customer['account_type']}, branch {customer['branch']}, "
+            f"customer ID {customer['customer_id']}, account type {customer['account_type']}, branch {customer['branch']}, "
             f"IFSC {customer['ifsc']}, registered mobile {customer['registered_mobile']}, "
             f"and account number ending with {_mask_account_number(customer['account_number'])}."
         )
@@ -349,7 +362,7 @@ def _handle_customer_lookup(
         if _is_customer_intent_query(translated_query) or _is_account_type_query(translated_query):
             return (
                 "I can help with demo customer account details. "
-                "Please provide the customer name or account number first, for example Ravi Kumar or account 451278903214."
+                "Please provide the customer name, customer ID, or account number first, for example Ravi Kumar, CUST1014, or account 451278903214."
             )
         return None
 

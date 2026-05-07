@@ -20,8 +20,14 @@ def _normalize(text: str) -> str:
 def find_customer_in_text(text: str, customers: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     normalized_text = _normalize(text)
     digits_only = "".join(character for character in text if character.isdigit())
+    compact_text = "".join(character.lower() for character in text if character.isalnum())
 
     for customer in customers:
+        customer_id = str(customer.get("customer_id", "")).lower()
+        if customer_id and customer_id in normalized_text:
+            return customer
+        if customer_id and customer_id.replace("-", "") in compact_text:
+            return customer
         if _normalize(customer["full_name"]) in normalized_text:
             return customer
         first_name = _normalize(customer["full_name"].split()[0])
