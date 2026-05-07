@@ -17,6 +17,15 @@ def _parse_supported_languages() -> Dict[str, str]:
         "hi": "Hindi",
         "te": "Telugu",
         "ta": "Tamil",
+        "bn": "Bengali",
+        "kn": "Kannada",
+        "ml": "Malayalam",
+        "mr": "Marathi",
+        "gu": "Gujarati",
+        "pa": "Punjabi",
+        "zh-cn": "Chinese (Simplified)",
+        "ja": "Japanese",
+        "ko": "Korean",
     }
 
 

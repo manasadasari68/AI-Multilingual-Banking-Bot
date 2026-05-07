@@ -4,7 +4,7 @@ An AI-powered multilingual banking assistant built with FastAPI, Streamlit, Lang
 
 ## Features
 
-- Multilingual support for English, Hindi, Telugu, and Tamil
+- Multilingual support for English, Hindi, Telugu, Tamil, Bengali, Kannada, Malayalam, Marathi, Gujarati, Punjabi, Chinese, Japanese, and Korean
 - Automatic language detection with `langdetect`
 - Translation flow using `deep-translator`
 - Retrieval-Augmented Generation with LangChain and FAISS
