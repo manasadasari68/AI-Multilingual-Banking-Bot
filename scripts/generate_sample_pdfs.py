@@ -15,6 +15,8 @@ DOCUMENTS = {
             "To open a standard savings account, customers usually need Aadhaar or another government ID, PAN, address proof, and a recent passport-size photograph.",
             "Banks may ask for an initial deposit amount depending on product type, branch policy, and account category.",
             "Customers who want to check account balance can use mobile banking, internet banking, ATMs, passbook updates, SMS banking, or call official customer care after verification.",
+            "Customers can link Aadhaar and PAN to their bank account by visiting the branch, using internet banking if the bank supports it, or submitting a service request with identity details and account verification.",
+            "If Aadhaar and PAN are not linked correctly, customers should verify name matching, date of birth, and KYC details, then contact the branch or customer support for correction.",
             "Before discussing account details such as registered mobile number, branch, account status, or last transactions, the bank should verify the customer using secure authentication steps.",
             "If a customer asks for sensitive account information in chat, the safe response is to guide them to logged-in banking channels or branch support instead of exposing private data directly.",
             "If a debit card is lost, customers should block the card immediately through mobile banking, internet banking, customer care, or the branch.",
@@ -29,6 +31,8 @@ DOCUMENTS = {
             "For balance-related requests, the assistant should ask the customer to use secure channels such as mobile banking, internet banking, ATM, passbook printing, or official phone banking after identity verification.",
             "If a customer cannot access their balance because of app login issues, they should reset credentials using official recovery steps or contact bank support.",
             "When a customer asks about account status, the assistant can explain the process, required verification, and available support channels without exposing private account data.",
+            "Balance enquiry is usually available through mobile banking, passbook update, ATM balance check, SMS banking, internet banking, and official customer care after authentication.",
+            "Customers who need Aadhaar and PAN linking support should keep identity details ready and follow the bank's KYC or profile update process through branch or secure digital channels.",
         ],
     },
     "rbi_guidelines.pdf": {

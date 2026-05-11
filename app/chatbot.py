@@ -25,6 +25,7 @@ If the documents do not contain the answer, say that clearly and provide a safe,
 Keep answers concise, practical, and customer-friendly.
 Prioritize these topics when they appear: loans, KYC, credit cards, account opening, fraud awareness, and ATM support.
 Never invent policy numbers, interest rates, or eligibility rules that are not present in the context.
+Do not mention phrases like "retrieved banking context", "retrieved documents", "credit card guidelines", or explain where the answer came from unless the user explicitly asks for sources.
 """.strip()
 
 
@@ -161,6 +162,25 @@ def _contains_pronoun_reference(text: str) -> bool:
     return any(pronoun in lowered for pronoun in pronouns)
 
 
+def _is_general_support_query(text: str) -> bool:
+    lowered = text.lower()
+    patterns = [
+        "how can i",
+        "how do i",
+        "how to",
+        "process",
+        "steps",
+        "link aadhaar",
+        "link aadhar",
+        "aadhaar and pan",
+        "aadhar and pan",
+        "update kyc",
+        "check my account balance",
+        "balance enquiry",
+    ]
+    return any(pattern in lowered for pattern in patterns)
+
+
 def _is_customer_intent_query(text: str) -> bool:
     lowered = text.lower()
     customer_terms = [
@@ -272,6 +292,25 @@ def _recent_transactions_text(customer: Dict[str, object], count: int = 3) -> st
     return " ".join(numbered)
 
 
+def _clean_final_answer(text: str) -> str:
+    cleaned_lines: List[str] = []
+    banned_fragments = [
+        "retrieved banking context",
+        "retrieved credit card guidelines",
+        "retrieved documents",
+        "provided documents",
+        "this information is based on",
+    ]
+    for line in text.splitlines():
+        stripped = line.strip()
+        lowered = stripped.lower()
+        if stripped and any(fragment in lowered for fragment in banned_fragments):
+            continue
+        cleaned_lines.append(line)
+    cleaned = "\n".join(cleaned_lines).strip()
+    return cleaned or text.strip()
+
+
 def _build_customer_response(query_en: str, customer: Dict[str, object], self_query: bool) -> str:
     subject = _subject(customer, self_query)
     parts: List[str] = []
@@ -345,17 +384,21 @@ def _handle_customer_lookup(
     if not _is_customer_intent_query(translated_query):
         return None
 
+    explicit_customer = find_customer_in_text(query, customers) or find_customer_in_text(translated_query, customers)
+    history_customer = find_customer_from_history(history, customers)
+
+    if explicit_customer is None and history_customer is None and _is_general_support_query(translated_query):
+        return None
+
     customer_from_history = False
-    customer = find_customer_in_text(query, customers)
-    if customer is None:
-        customer = find_customer_in_text(translated_query, customers)
+    customer = explicit_customer
     if customer is None:
         if _has_explicit_unknown_customer_reference(query, translated_query, customers):
             return (
                 "I could not find that customer account in the demo records. "
                 "Please create an account or contact your branch or customer support for help."
             )
-        customer = find_customer_from_history(history, customers)
+        customer = history_customer
         customer_from_history = customer is not None
 
     if customer is None:
@@ -465,7 +508,7 @@ If context is missing, say you could not find a confirmed answer in the provided
     )
     response.raise_for_status()
     payload = response.json()
-    answer_in_english = payload["choices"][0]["message"]["content"].strip()
+    answer_in_english = _clean_final_answer(payload["choices"][0]["message"]["content"].strip())
     localized_answer = (
         answer_in_english
         if language_code == "en"
